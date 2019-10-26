@@ -1,0 +1,103 @@
+\documentclass[fleqn,usenatbib]{mnras}
+
+\pdfoutput=1  % pdfoutput used for arXiv
+
+% \pdfminorversion=5
+% \pdfobjcompresslevel=3
+% \pdfcompresslevel=9
+
+\usepackage{graphicx}            % Include external graphics
+\usepackage{amsmath}             % Include advanced math symbols
+\usepackage{amssymb}             % Include intuitive symbol use
+\usepackage{gensymb}             % Include in particular the degree sign
+\usepackage{bm}                  % More general bold math symbols
+\usepackage{xspace}              % Include handling of spaces after shortcuts
+\usepackage{nicefrac}            % Prettier fractions
+\usepackage{hyperref}            % Link references and urls
+\usepackage{xcolor}              % Customizable colors
+\usepackage{ifthen}
+\usepackage{enumitem}
+
+\title[Paper title]{Paper title:\\ Think of something catchy}
+
+\newcommand{\nauthor}[2]{#2,$^{#1}$}
+\newcommand{\nauthorl}[2]{#2$^{#1}$}
+\newcommand{\email}[1]{\thanks{Email: #1}}
+\newcommand{\naffiliation}[2]{$^{#1}$#2}
+
+
+% Author list
+\author[Denzel et al.]{%
+  \nauthor{1,2}{Philipp Denzel} \email{phdenzel@physik.uzh.ch}
+  % \nauthor{3}{} % \email{}
+  \nauthorl{1,2}{Prasenjit Saha} % \email{psaha@physik.uzh.ch}
+  \newauthor
+  \\
+  \naffiliation{1}{Institute for Computational Science, University of Zurich, 8057 Zurich, Switzerland} \\
+  \naffiliation{2}{Physics Institute, University of Zurich, 8057 Zurich, Switzerland} \\
+  %\naffiliation{3}{} \\
+}
+
+\date{}
+\pubyear{}
+
+
+\begin{document}
+
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+
+\maketitle
+
+
+\begin{abstract}
+  %
+  \noindent This is the abstract: Start with the motivation!  Then you
+  can say something like: In this paper, we have...  Describe what has
+  been done.  Say the important stuff, i.e. results, short and
+  precise, drop some nice numbers, and end with the main message of
+  the paper.
+\end{abstract}
+
+
+\begin{keywords}
+  Gravitational lensing: strong
+\end{keywords}
+% \tableofcontents
+
+
+\input{tex/intro.tex}
+
+\input{tex/theory.tex}
+
+\input{tex/methods.tex}
+
+\input{tex/results.tex}
+
+\input{tex/conclusion.tex}
+
+% \clearpage
+
+%%%% Funding statement
+% 
+\section*{Funding statement}
+PD acknowledges support from the Swiss National Science Foundation.
+
+%%%% Acknowledgements
+% 
+% \section*{Acknowledgments}
+
+
+%%%% Bibliography
+%
+\bibliographystyle{mnras}
+\bibliography{refs}
+
+
+%%%% Figures
+%
+\input{fig/figures.tex}
+\label{lastpage}
+\clearpage
+
+\end{document}
